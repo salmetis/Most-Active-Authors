@@ -13,7 +13,7 @@ def getUsernames(threshold):
         for item in range(0, len(page_content["data"])):
             if page_content["data"][item]['submission_count'] > threshold: # You missed this condition
                 username.append(str(page_content["data"][item]["username"]))
-    return "\n".join(username)
+    return username
 
 
 print(getUsernames(10))
