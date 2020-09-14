@@ -11,7 +11,7 @@ def getUsernames(threshold):
         page_content = json.loads(page_response.content.decode('utf-8'))
         # print ('page_content', page_content, 'type(page_content)', type(page_content))
         for item in range(0, len(page_content["data"])):
-            if page_content["data"][item]['submission_count'] > threshold: # You missed this condition
+            if page_content["data"][item]['submission_count'] > threshold:
                 username.append(str(page_content["data"][item]["username"]))
     return username
 
